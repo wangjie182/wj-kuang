@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="kuang4.js"></script>        
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="kuang4.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body> 
+<div class="out">
+    <!-- 左边显示菜单栏 -->
+    <div class="menu" id="menu" >
+        <div class="fa fa-file-text-o fa-2x" aria-hidden="true">
+            <span style="font-size:medium;margin-left:10px">Docs</span>
+        </div>
+        <!-- 三个列表选项 -->
+         <ul  id="number">
+            <!-- 第一个：Home -->
+            <li style="color: #fff;background-color:#108ee9" >
+                 <span  class="fa fa-home " aria-hidden="true">
+                    <span style="left:11px">Home</span>
+                </span>
+            </li>
+            <!-- 第二个：Rdk -->
+            <li >
+                <span  class="fa fa-user-o" aria-hidden="true">
+                    <span style="left:11px">Rdk</span>
+                </span>
+            </li>
+            <!-- 第三个：Table -->
+            <li >
+                <span  class="fa fa-upload"  aria-hidden="true">
+                    <span style="left:11px">Table</span>
+                </span>
+            </li>    
+        </ul>
+    </div>
+
+    <!-- 右边显示内容大框 -->
+    <div class="kuang" >
+        <header></header>
+        <!-- 三个弹出页面框 -->
+        <div id="content"  >
+            <!-- 第一个页面:Home -->
+            <div class="page"  >
+                    <ul class="polaroids">
+                            <li><a href="#" title="Roelan"><img src="images/image-01.jpg" alt="Roeland!"></a></li>
+                            <li><a href="#" title="Discus"><img src="images/image-02.jpg" alt="Discussion"></a></li>
+                            <li><a href="#" title="A Hear"><img src="images/image-01.jpg" alt="A Hearty Laugh"></a></li>
+                            <li><a href="#" title="Evil M"><img src="images/image-02.jpg" alt="Evil Matt Coding"></a></li>
+                            <li><a href="#" title="Scribb"><img src="images/image-01.jpg" alt="Scribbles"></a></li>
+                            <li><a href="#" title="Amanda"><img src="images/image-02.jpg" alt="Amanda Glares..."></a></li>
+                            <li><a href="#" title="The Do"><img src="images/image-01.jpg" alt="The Dougernaut"></a></li>
+                            <li><a href="#" title="I See "><img src="images/image-02.jpg" alt="I See You!"></a></li>
+                    </ul>
+            </div>
+            <!-- 第二个页面:rdk -->
+            <div class="page" id="rdk" style="display:none"> 
+                rdk
+            </div>
+            <!-- 第三个页面:table -->
+            <div class="page"  style="display:none">
+                <p style="font-size:20px">Table<p>
+                <hr/>
+                    <form action="" method="get">
+                        <label >Type : </label>
+                        <select name="" >
+                            <option value="type0">All</option>
+                            <option value="type1">Docker</option>
+                            <option value="type2">OpenStack</option>
+                        </select>                            
+                        <label style="padding-left:3%">Status : </label>
+                        <select name="">
+                            <option value="status0">All</option>
+                            <option value="status1">Running</option>
+                            <option value="status2">Finished</option>
+                            <option value="status3">Error</option>
+                        </select>                            
+                        <span style="padding-left:3%">
+                            Time : <input type="date" value="2017-10-01">
+                            To : <input type="date" value="2017-10-31">
+                        </span>
+                        <span class="check-s">查询<input type="submit" class="check-i" ></span>                        
+                    </form>
+                    <table id="table-1">
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>StartTime/EndTime</th>
+                            <th>Logs</th>
+                        </tr>
+
+                        <!--<tr>
+                        <td>Apple</td>
+                        <td>Steven Jobs</td>
+                        <td>USA</td>
+                        </tr>
+
+                        <tr class="alt">
+                        <td>Baidu</td>
+                        <td>Li YanHong</td>
+                        <td>China</td>
+                        </tr>
+
+                        <tr>
+                        <td>Google</td>
+                        <td>Larry Page</td>
+                        <td>USA</td>
+                        </tr>
+
+                        <tr class="alt">
+                        <td>Lenovo</td>
+                        <td>Liu Chuanzhi</td>
+                        <td>China</td>
+                        </tr>
+
+                        <tr>
+                        <td>Microsoft</td>
+                        <td>Bill Gates</td>
+                        <td>USA</td>
+                        </tr>
+
+                        <tr class="alt">
+                        <td>Nokia</td>
+                        <td>Stephen Elop</td>
+                        <td>Finland</td>
+                        </tr>
+ -->
+                    </table>
+                <hr/>
+
+
+
+
+                    
+            </div>
+        </div>
+         <table style="clear:both;"></table>
+        <!-- 尾部注释 -->
+        <footer id="footer_click">
+            <div class="footcont" >
+                Docs @2017
+                <a style="color:#108ee9" href="https://github.com/WatermelonFruit/" target="_blank">WatermelonFruit</a>
+            </div>            
+        <footer>
+    
+    </div>
+    <!-- 小黑框 -->
+    <div class="skuang" id="cli_on">
+        <a class="fa fa-list-ul" aria-hidden="true"></a>
+    </div>
+</div>
+</body>
+</html>

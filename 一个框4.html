@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="一个框4.js"></script>
+        
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="一个框4.css">    
+    <style type="text/css">
+        html{
+          line-height: 1.15;
+          /* 父元素行高为1.15时，会根据子元素的字体大小动态
+          计算出行高值让子元素继承
+          子元素行高等于(? * 1.5)px */
+          -ms-text-size-adjust: 100%;
+          /* 字体大小自动调整功能. */
+          -webkit-text-size-adjust: 100%;
+          
+        }   
+        html,body {
+          width: 100%;
+          height: 100%;
+        }
+        body {
+          line-height: 1.5;
+          color: rgba(0, 0, 0, 0.65);
+          background-color: #fff;
+          overflow: hidden;
+        }
+        body,div,span,dl,ul,li,a{
+          margin: 0;
+          padding: 0;
+        }        
+        .out{
+            background: #ececec;
+        }
+        .fa-file-text-o{
+            width: 200px;
+            height: 75px;
+            float: left;
+            margin-left:5px;
+            line-height: 75px;
+        }          
+        ul{
+            outline: none;
+            color: #838080;
+            margin-bottom: 0;
+            list-style: none;
+            text-align: left;
+            height: 144px;
+            position: fixed;
+            top:75px;
+        }
+           
+        li{
+            list-style-type: none;
+            font-size:8px;           
+            width: 200px;          
+            height: 48px;
+            line-height: 48px;
+            transition: background .3s ease-in-out;
+        }              
+        .licont{
+            text-align:center;
+            padding:20px;
+
+        }
+        li span{                
+            position: relative;
+            background: transparent;
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+            height:100%;
+            left:25px;
+        }
+        li span:active,
+        li span:hover {
+          color: #fff;
+          outline: 0;
+          text-decoration: none;
+        }
+        .liname{
+            font-size:small;
+        }
+
+        section{
+            width: 350px;
+            float:left;
+            padding:5px;            
+        }        
+
+        .menu{
+            position: fixed;
+            background: #404040;
+            height:100%;
+            width:200px;
+            float: left;
+            color: #fff;
+            z-index:88;
+            transition:1s;
+            /* overflow: hidden;
+            text-overflow: ellipsis;  */
+        }
+
+        .skuang{
+            position: fixed;
+            top: 75px;
+            left:200px;
+            text-align: center;
+            width: 43px;
+            height: 48px;
+            z-index:88;
+            line-height: 48px;
+            background-color: #404040;
+            /* color: #fff; */
+            font-size: 23px;
+            border-radius: 0 4px 4px 0; 
+            cursor: pointer;
+            /* transition: background .3s ease-in-out; */
+            transition:1s;
+        }
+        .skuang a{
+            color: #fff;
+            line-height: 48px;
+            text-decoration: none;
+        }
+        .skuang:hover{
+            background-color: #5a5959;
+        }         
+        .kuang{
+            /* position: fixed; */
+            /* left:200px; */
+            height:100%;
+            width:100%;
+            background-color:rgb(221, 217, 217);
+        }
+        header{
+            background: #2ec6dd;
+            height: 75px;
+            line-height: 64px;
+            flex: 0 0 auto;
+            /* position:fixed; */
+            margin-bottom: 15px;
+        }        
+        #content{
+            padding:24px;
+            margin:14px;
+            background: #fff; 
+            height: calc(100vh - 196px);
+            float:right;
+            width:80%;
+            transition:1s;
+            margin-left:20%;
+        }
+        .page{
+            /* height: 480px;
+            width: 366px; */
+            overflow-y:auto; 
+        }         
+        footer{
+            position: absolute;
+            text-align: center;
+            padding-left: 50%;
+            transition:.1s;
+        }
+        .footcont{
+            padding: 11px;
+            color: rgba(0, 0, 0, 0.65);
+            font-size: 12px;
+
+        }
+    </style>
+</head>
+
+<body> 
+<div class="out">
+    <!-- 左边显示菜单栏 -->
+    <div class="menu" id="menu" >
+        <div class="fa fa-file-text-o fa-2x" aria-hidden="true">
+            <span style="font-size:medium;margin-left:10px">Docs</span>
+        </div>
+        <!-- 三个列表选项 -->
+         <ul  id="number">
+            <!-- 第一个：Home -->
+            <li style="color: #fff;background-color:#108ee9">
+                 <span  class="fa fa-home " aria-hidden="true">
+                    <span style="left:11px">Home</span>
+                </span>
+            </li>
+            <!-- 第二个：Rdk -->
+            <li id="rdk">
+                <span  class="fa fa-user-o" aria-hidden="true">
+                    <span style="left:11px">Rdk</span>
+                </span>
+            </li>
+            <!-- 第三个：Table -->
+            <li >
+                <span  class="fa fa-upload"  aria-hidden="true">
+                    <span style="left:11px">Table</span>
+                </span>
+            </li>    
+        </ul>
+    </div>
+
+    <!-- 右边显示内容大框 -->
+    <div class="kuang" >
+        <header></header>
+        <!-- 三个弹出页面框 -->
+        <div id="content"  >
+            <!-- 第一个页面:Home -->
+            <div class="page" >
+                home work!
+            </div>
+            <!-- 第二个页面:Home -->
+            <div class="page"  style="display:none"> 
+                rdk
+            </div>
+            <!-- 第三个页面:Home -->
+            <div class="page"  style="display:none">
+                table
+            </div>
+        </div>
+        <table style="clear:both;"></table>
+        <!-- 尾部注释 -->
+        <footer id="footer_click">
+            <div class="footcont" >
+                Docs ©2017
+                <a style="color:#108ee9" href="https://github.com/WatermelonFruit/" target="_blank">WatermelonFruit</a>
+            </div>            
+        <footer>
+    
+    </div>
+    <!-- 小黑框 -->
+    <div class="skuang" id="cli_on">
+        <a class="fa fa-list-ul" aria-hidden="true"></a>
+    </div>
+</div>
+</body>
+
+</html>

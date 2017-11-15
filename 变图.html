@@ -1,0 +1,127 @@
+<!--  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>变图</title>
+
+<style type="text/css">  
+    *{  
+        margin:0;  
+        padding:0;  
+    }  
+      
+    #wrapper{  
+        margin:10px;  
+        width:380px;  
+        height:230px;  
+    }  
+      
+    ul#number{  
+        position:absolute;  
+        left: 288px;  
+        top: 160px;  
+    }  
+      
+    #number li{  
+        float:left;  
+        margin-right:10px;  
+        border:1px solid #FFF;  
+        list-style:none;  
+        width:20px;  
+        height:20px;  
+        color:#fff;  
+        text-align:center;  
+        cursor:pointer;  
+        background:#000;  
+        color:#FFF;  
+    }  
+      
+    #numbercolor{  
+        background:#FFF;  
+        color:#000;  
+    }  
+      
+    #title{  
+        width:380px;  
+        height:50px;  
+        background:#000;  
+        opacity:0.55;  
+        filter: alpha(opacity=55);  
+        position:absolute;  
+        margin-top:180px;  
+        z-index: 999;  
+    }  
+      
+    #wrapper h3{  
+        font-size:14px;  
+        color:#FFF;  
+        position:absolute;  
+        margin-top:180px;  
+        line-height:50px;  
+        width:380px;  
+        height:50px;  
+        z-index:1000;  
+        text-align:center;  
+    }  
+    </style>  
+<script>
+window.onload=function setImage(){   
+    
+    var number=document.getElementById("number");                     
+    var list=number.getElementsByTagName("li");                       
+    for (var i=0;i<list.length;i++){                                  
+                                            
+list[i].onclick=function(){     
+
+            var img=document.getElementsByTagName("img");    
+
+            for (var i=0;i<img.length;i++){    
+       //让ul下的li都回复默认样式 
+       var listul=number.getElementsByTagName("ul"); 
+       number.children[i].style.backgroundColor="#FFF";                   
+   number.children[i].style.color="#000"; 
+   var nvalue = this.lastChild.nodeValue; 
+bnvalue  = nvalue.replace(/(\s*)|(\r)|(\n)/g, ""); 
+if(img[i].src.indexOf(bnvalue)!=-1){ 
+ img[i].style.display="block";                         
+ var h3=document.getElementsByTagName("h3")[0];   
+ h3.lastChild.nodeValue=img[i].title;  
+
+ }else{                                               
+ img[i].style.display="none";                     
+ }                                                    
+
+ } 
+  //被点击li的样式改变 
+this.style.backgroundColor="#000";                   
+ this.style.color="#FFF"; 
+} 
+
+     }    
+  
+}
+</script>
+</head>
+
+<body>
+    
+
+<div id="wrapper">  
+    <ul id="number">  
+        <li>1</li>  
+        <li>2</li>  
+        <li>3</li>  
+    </ul>  
+    <h3>[资源] 测试测试测试</h3>  
+    <div id="title"></div>  
+    <img src="1.jpg" title="[资源] 测试测试测试" />  
+    <img src="2.jpg" title="[资源] 测试测试测试" style="display:none;"/>  
+    <img src="3.jpg" title="[资源] 测试测试测试" style="display:none;"/>  
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!-- <script language="javascript">
+        function showmenu(x)
+        {
+        var i,divx;
+        for(i=1;i<=3;i++)
+        {
+        divx=eval("m"+i);
+        divx.style.visibility="hidden";
+        }
+        divx=eval("m"+x);
+        divx.style.visibility="visible";
+        }
+</script> -->
+
+<script>
+        
+       var i =1;
+        
+       function trigger(){
+        
+        var mydiv = document.getElementById("mydiv");
+        
+        if(i%2==1){
+        
+         mydiv.style.display='block';
+        
+        }
+        
+        if(i%2==0){
+        
+         mydiv.style.display='none';
+        
+        }
+        
+        i++;
+        
+       }
+        
+       </script>
+
+       
+<!DOCTYPE>
+<html>
+    <head>
+    <script language="javascript">
+        function show_div(){
+        var obj_div=document.getElementById("starlist");
+        obj_div.style.display=(obj_div.style.display=='none')?'block':'none';
+        }
+        function hide_div(){
+        var obj_div=document.getElementById("starlist");
+        obj_div.style.display=(obj_div.style.display=='none')?'block':'none';
+        }
+    </script>
+    </head>
+    <body> 
+        <a href="javascript:show_div()" >显示/展开</a>
+        <div id="starlist">
+            内容<br/>
+            内容<br/>
+            内容<br/>
+            内容<br/>
+        </div>
+        <div id="starlist2" style="background-color:blue">
+                内容dfgh<br/>
+                内容dfgh<br/>
+                内容dfghj<br/>
+                内容zxhdjhj<br/>
+            </div>
+            <div id="starlist3" style="background-color:blue">
+                    内容asdfghjk<br/>
+                    内容Zfghjk<br/>
+                    内容zxcvb<br/>
+                    内容Szdghjk,l<br/>
+                </div>
+    </body>
+</html>
