@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html{
     line-height: 1.15;
     /* 父元素行高为1.15时，会根据子元素的字体大小动态
@@ -133,6 +134,9 @@ html{
       /* position:fixed; */
       margin-bottom: 15px;
   }        
+=======
+      
+>>>>>>> d6cda072da8a669b389d30d4c498f8682e7178ee
   #content{
       padding:24px;
       margin:14px;
