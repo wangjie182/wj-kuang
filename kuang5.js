@@ -12,23 +12,23 @@ window.onload=function setContent(){
         (function(i){                                                                      
             list[i].onclick=function(){          
                 for(var k=0;k<list.length;k++){
-                    //ÈÃulÏÂµÄli¶¼»Ø¸´Ä¬ÈÏÑùÊ½    
+                    //è®©ulä¸‹çš„liéƒ½å›å¤é»˜è®¤æ ·å¼    
                     list[k].style.backgroundColor="";
                     list[k].style.color="#aaa7a7";
-                    //½«¿òÄÚÄÚÈİ¶¼ÏÔÊ¾ÎŞ
+                    //å°†æ¡†å†…å†…å®¹éƒ½æ˜¾ç¤ºæ— 
                     div[k].style.display="none";
                 } 
-                //±»µã»÷liµÄÑùÊ½¸Ä±ä
+                //è¢«ç‚¹å‡»liçš„æ ·å¼æ”¹å˜
                 this.style.backgroundColor="#108ee9";                   
                 this.style.color="#FFF";
-                //µã»÷ºóÏàÓ¦Ò³ÃæÏÔÊ¾
+                //ç‚¹å‡»åç›¸åº”é¡µé¢æ˜¾ç¤º
                 div[i].style.display="block";   
             } 
         })(m)      
     }
     click.onclick = function () {
      clearTimeout(initime);
-     //¸ù¾İ×´Ì¬flagÖ´¿ªÕ¹¿ªÊÕËõ
+     //æ ¹æ®çŠ¶æ€flagæ‰§å¼€å±•å¼€æ”¶ç¼©
      if (flag) {
       r_len = 0;
       timer = setInterval(slideleft, 10);
@@ -37,7 +37,7 @@ window.onload=function setContent(){
       timer = setInterval(slideright, 10);
      }
     }
-    //Õ¹¿ª
+    //å±•å¼€
     function slideleft() {
       if (r_len <= -200) {
         clearInterval(timer);
@@ -52,7 +52,7 @@ window.onload=function setContent(){
         click.style.opacity = "0.8";
       }
     }
-    //ÊÕËõ
+    //æ”¶ç¼©
     function slideright() {
       if (r_len >= 0) {
         clearInterval(timer);
@@ -68,17 +68,17 @@ window.onload=function setContent(){
         
       }
     }
-    //¼ÓÔØºó20ÃëÒ³Ãæ×Ô¶¯ÊÕËõ
+    //åŠ è½½å20ç§’é¡µé¢è‡ªåŠ¨æ”¶ç¼©
     initime = setTimeout("cli_on.click()", 20000);
     
-    //rdkÏÔÊ¾
+    //rdkæ˜¾ç¤º
     fetch('https://t.vdfor.top/api/v0/docs/test/1').then(function(response){
       response.json().then(function(data){                                  
           document.querySelector("#rdk").innerHTML = data.data;
       })
       })    
 }
-//tableÏÔÊ¾
+//tableæ˜¾ç¤º
 function query(){
   fetch('https://t.vdfor.top/api/v0/hy/test/list?type=0&status=0&startTime=2017-09-31&endTime=2017-10-31&current=1&pageSize=50')
   .then((response)=>{
@@ -120,7 +120,7 @@ function query(){
   })
 }
 
-//±í¸ñ·­Ò³
+//è¡¨æ ¼ç¿»é¡µ
     // var theTable = document.getElementById("ftab");
     // var totalPage = document.getElementById("spanTotalPage");
     // var pageNum = document.getElementById("spanPageNum");
@@ -129,9 +129,9 @@ function query(){
     // var spanFirst = document.getElementById("spanFirst");
     // var spanLast = document.getElementById("spanLast");
     // var numberRowsInTable = theTable.rows.length;
-    // var pageSize =6 ;//ÉèÖÃÃ¿Ò»Ò³ÒªÏÔÊ¾µÄÊıÄ¿
+    // var pageSize =6 ;//è®¾ç½®æ¯ä¸€é¡µè¦æ˜¾ç¤ºçš„æ•°ç›®
     // var page = 5;
-    // //ÏÂÒ»Ò³
+    // //ä¸‹ä¸€é¡µ
     // function next() {
     // hideTable();
     // currentRow = pageSize * page;
@@ -150,7 +150,7 @@ function query(){
     // preLink();
     // firstLink();
     // }
-    // //ÉÏÒ»Ò³
+    // //ä¸Šä¸€é¡µ
     // function pre() {
     // hideTable();
     // page--;
@@ -169,7 +169,7 @@ function query(){
     // nextLink();
     // lastLink();
     // }
-    // //µÚÒ»Ò³
+    // //ç¬¬ä¸€é¡µ
     // function first() {
     // hideTable();
     // page =1 ;
@@ -181,7 +181,7 @@ function query(){
     // nextLink();
     // lastLink();
     // }
-    // //×îºóÒ»Ò³
+    // //æœ€åä¸€é¡µ
     // function last() {
     // hideTable();
     // page = pageCount();
@@ -202,22 +202,22 @@ function query(){
     // function showPage() {
     // pageNum.innerHTML = page;
     // }
-    // //×Ü¹²Ò³Êı
+    // //æ€»å…±é¡µæ•°
     // function pageCount() {
     // var count = 0;
     // if ( numberRowsInTable%pageSize !=5 ) count =1 ; 
     // return parseInt(numberRowsInTable/pageSize) + count;
     // }
-    // //ÏÔÊ¾Á´½Ó
-    // function preLink() { spanPre.innerHTML = "<a href='javascript:pre();'>ÉÏÒ»Ò³</a>"; }
-    // function preText() { spanPre.innerHTML = "ÉÏÒ»Ò³"; }
-    // function nextLink() { spanNext.innerHTML = "<a href='javascript:next();'>ÏÂÒ»Ò³</a>"; }
-    // function nextText() { spanNext.innerHTML = "ÏÂÒ»Ò³"; }
-    // function firstLink() { spanFirst.innerHTML = "<a href='javascript:first();'>µÚÒ»Ò³</a>"; }
-    // function firstText() { spanFirst.innerHTML = "µÚÒ»Ò³"; }
-    // function lastLink() { spanLast.innerHTML = "<a href='javascript:last();'>×îºóÒ»Ò³</a>"; }
-    // function lastText() { spanLast.innerHTML = "×îºóÒ»Ò³"; }
-    // //Òş²Ø±í¸ñ
+    // //æ˜¾ç¤ºé“¾æ¥
+    // function preLink() { spanPre.innerHTML = "<a href='javascript:pre();'>ä¸Šä¸€é¡µ</a>"; }
+    // function preText() { spanPre.innerHTML = "ä¸Šä¸€é¡µ"; }
+    // function nextLink() { spanNext.innerHTML = "<a href='javascript:next();'>ä¸‹ä¸€é¡µ</a>"; }
+    // function nextText() { spanNext.innerHTML = "ä¸‹ä¸€é¡µ"; }
+    // function firstLink() { spanFirst.innerHTML = "<a href='javascript:first();'>ç¬¬ä¸€é¡µ</a>"; }
+    // function firstText() { spanFirst.innerHTML = "ç¬¬ä¸€é¡µ"; }
+    // function lastLink() { spanLast.innerHTML = "<a href='javascript:last();'>æœ€åä¸€é¡µ</a>"; }
+    // function lastText() { spanLast.innerHTML = "æœ€åä¸€é¡µ"; }
+    // //éšè—è¡¨æ ¼
     // function hide() {
     // for ( var i = pageSize; i<numberRowsInTable; i++ ) {
     // theTable.rows[i].style.display = 'none';
